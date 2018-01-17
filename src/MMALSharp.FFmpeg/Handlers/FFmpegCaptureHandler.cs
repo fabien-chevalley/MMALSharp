@@ -22,7 +22,7 @@ namespace MMALSharp.Handlers
         /// <returns></returns>
         public static FFmpegCaptureHandler RTMPStreamer(string streamName, string streamUrl)
         {
-            return new FFmpegCaptureHandler($"-i - -vcodec copy -an -f flv -metadata streamName={streamName} {streamUrl}");
+            return new FFmpegCaptureHandler($"-i - -vcodec copy -an -f flv {streamUrl}{streamName}");
         }
 
         /// <summary>
